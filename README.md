@@ -78,3 +78,14 @@ dibangun untuk Windows (MinGW/MSVC) dan belum dicoba di sini; bila dibutuhkan,
 jalur yang paling aman adalah membangun dari source ini di mesin Windows yang
 sudah terpasang Qt 6 (Qt Creator atau `cmake` + MinGW), karena `CMakeLists.txt`
 tidak mengandung hal spesifik Linux.
+
+## Binary siap pakai (Linux)
+
+Binary Linux 64-bit hasil build dari source di repo ini tersedia di
+`dist/penjadwalan-qt`. Jalankan langsung tanpa membangun ulang:
+
+`./dist/penjadwalan-qt`
+
+Data contoh bawaan sudah disesuaikan (SIS310D dialihkan ke Rido Zulfahmi,
+D3SI312A dialihkan ke Noor Falih) sehingga hasil Dinic bebas bentrok.
+Binary ini dibangun di Linux dan membutuhkan runtime Qt 6 Widgets.

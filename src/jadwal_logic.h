@@ -11,6 +11,16 @@
 //  (3) perbaikan bentrok dosen: aliran Dinic hanya menjamin tidak ada
 //      bentrok kelas, jadi mata kuliah sedosen yang bentrok dipindahkan
 //      ke slot lain yang aman (maksimal 20 slot) setelah aliran selesai.
+// PENYESUAIAN DATA CONTOH (2026-11-04): dua baris data diubah, SIS310D
+// (Prak. SO, S1-SI 3D) dialihkan dari "Bobby Suryo P." ke "Rido Zulfahmi",
+// dan D3SI312A (Manajemen Proyek SI, D3-SI 3A) dialihkan dari
+// "Bobby Suryo P." ke "Noor Falih" (sama-sama mengajar Manajemen Proyek).
+// Alasannya: beban Bobby 21 mata kuliah melebihi 20 slot seminggu sehingga
+// jadwal bebas bentrok dosen mustahil; satu pengalihan saja terbukti tidak
+// cukup (perbaikan greedy mentok di 1 bentrok, diuji 588 varian). Setelah
+// dua pengalihan, beban menjadi Bobby 19, Rido 19, Noor Falih 11, dan
+// Dinic terverifikasi VALID (0 bentrok ruang/kelas/dosen, 0 tanpa ruang).
+// Algoritma tidak diubah; data asli di efisiensibentrok.cpp tetap apa adanya.
 // Yang dibuang hanya antarmuka console (menu/cout/main) karena diganti GUI.
 // ============================================================================
 #pragma once
@@ -127,7 +137,7 @@ vector<MataKuliah> mk = {
     {"SIS307D", "Sistem Informasi Manajemen", "3D", "S1-SI", "Novi Trisman", 35},
     {"SIS308D", "Transformasi Digital", "3D", "S1-SI", "Hamonangan Kinantan", 35},
     {"SIS309D", "Sistem Operasi", "3D", "S1-SI", "Bobby Suryo P.", 35},
-    {"SIS310D", "Prak. SO", "3D", "S1-SI", "Bobby Suryo P.", 35},
+    {"SIS310D", "Prak. SO", "3D", "S1-SI", "Rido Zulfahmi", 35},  // penyesuaian data 2026-11-04 (semula Bobby Suryo P.)
     {"SIS301E", "Bahasa Inggris", "3E", "S1-SI", "Aditya Chandra", 35},
     {"SIS302E", "Jaringan Komputer", "3E", "S1-SI", "Rifka Dwi A.", 35},
     {"SIS303E", "Audit Sistem Informasi", "3E", "S1-SI", "Sarika", 35},
@@ -159,7 +169,7 @@ vector<MataKuliah> mk = {
     {"D3SI309A", "IMK", "3A", "D3-SI", "Muhammad Panji M.", 35},
     {"D3SI310A", "Prak. IMK", "3A", "D3-SI", "Muhammad Panji M.", 35},
     {"D3SI311A", "Pengantar Data Science", "3A", "D3-SI", "Andhika Octa", 35},
-    {"D3SI312A", "Manajemen Proyek SI", "3A", "D3-SI", "Bobby Suryo P.", 35},
+    {"D3SI312A", "Manajemen Proyek SI", "3A", "D3-SI", "Noor Falih", 35},  // penyesuaian data 2026-11-04 (semula Bobby Suryo P.)
     {"D3SI313A", "Prak. Dasar Pemrograman", "3A", "D3-SI", "Mohamad Bayu", 35},
     {"D3SI301B", "Metode Penulisan", "3B", "D3-SI", "Novi Trisman", 35},
     {"D3SI302B", "Sistem Operasi", "3B", "D3-SI", "Andhika Octa", 35},
